@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+}
+
+/* :root {
+  --primary-color: #36adb9;
+} */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 100%;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    background: radial-gradient(#011624, #010b13);
+    background-blend-mode: soft-light;
+}
+
+
+.form-container {
+    width: 80%;
+    margin: 80px auto;
+    padding: 15px;
+    border: none;
+    background-color: #010b13;
+    color: #dddada;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0389f7;
+}
+ 
+.label {
+    display: block;
+    margin: 5px 0;
+}
+
+label {
+    display: block;
+    margin: 20px 0;
+}
+
+.gender-cont .group label, .hobbies-cont .group label {
+    display: inline;
+    margin: 0;
+    margin-right: 20px;
+    width: auto;
+}
+
+.gender-cont .group label:last-child, .hobbies-cont .group label:last-child {
+    margin-left: 0;
+}
+
+.hobbies-cont {
+    padding: 20px 0;
+}
+
+input, button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background-color: #021c2e;
+    color: #dddada;
+}
+
+input[type="radio"], [type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+input:focus {
+    background-color: #305479;
+    border: solid 1px #021c2e;
+    color: #dddada;
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    border: ridge 1px  #021c2e;
+}
+
+button:hover {
+    opacity: 0.7;
+    outline: none;
+}
+
+.signupbtn {
+    width: 100%;
+    margin: 25px 0;
+    border-radius: 5px;
+    background-color: #0389f78f;
+}
+
+
+@media screen and (min-width: 700px) {
+    div.container {
+        text-align: justify;
+    }
+
+    div.container label {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        clear: both;
+    }
+
+    div.gender-cont label, div.hobbies-cont label {
+        display: inline;
+        text-align: left;
+    }
+
+    div.container .group {
+        display: inline;
+        width: 70%;
+        float: right;
+    }
+
+    .label {
+        display: inline;
+        margin: 5px 0;
+        padding: 12px 7px;
+        position: relative;
+        top: 28%;
+    }
+
+    #c-psw {
+        top: 0;
+    }
+
+    input {
+        width: 70%;
+        float: right;
+    }
+
+    .gender-cont input, .hobbies-cont input {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    div.container {
+        display: flex;
+       flex-direction: row;
+       flex-wrap: nowrap;
+       justify-content: space-between;
+       clear: both;
+       margin: 15px 0;
+       text-align: right;  
+   }
+
+   label {
+    display: block;
+    margin: 15px 0;
+    width: 47%;
+    margin: 15px 0;
+    float: right;    
+}
+
+
+div.container .group {
+    width: 100%;
+    float: none;
+    text-align: justify;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+} 
+
+.gender-cont .group label, .hobbies-cont .group label {
+    display: inline;
+    float: none;
+    margin-right: 10px;
+}
+
+.label {
+    display: block;
+    margin: 5px 0;
+    padding: 0 7px;
+    position: relative;
+    top: 18%;
+}
+
+.gender-cont .label,  .hobbies-cont .label {
+    display: inline;
+    top: 0;
+}
+
+ form button.signupbtn {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+}
