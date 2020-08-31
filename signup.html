@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <div class="modal">
+        <form action="" name="myform" onsubmit="return validateForm()">
+            <div class="form-container">
+                <h1>CREATE ACCOUNT</h1>
+                <p>Please fill in this for to sign up with us.</p>
+                <div class="container name-cont">
+                    <label for="fname"><span class="label">Firstname:</span>
+                        <input type="text" name="fname" id="fname" placeholder=" Enter Firstname" required>
+                    </label>
+                    <label for="lname"><span class="label">Lastname:</span>
+                        <input type="text" name="lname" id="lname" placeholder=" Enter Lastname" required>
+                    </label>
+                </div>
+                <div class="container email-cont">
+                    <label for="uname"><span class="label">Username:</span>
+                        <input type="text" name="uname" id="uname" placeholder="Enter Username" required>
+                    </label>
+                    <label for="email"><span class="label">Email:</span>
+                        <input type="email" name="email" id="email" placeholder="Enter Email" required>
+                    </label>
+                </div>
+                <div class="container birthday-cont">
+                    <label for="birthday"><span class="label">Birthday:</span>
+                        <input type="date" name="birthday" id="birthday" placeholder="Select Birthday" max="2015-12-31"
+                            required>
+                    </label>
+                    <label for="country"><span class="label">Country:</span>
+                        <input type="text" name="country" id="country" placeholder="Enter Country" required>
+                    </label>
+                </div>
+                <div class="container gender-cont">
+                    <label><span class="label">Gender:</span></label>
+                    <div class="group">
+                        <label for="male">
+                            <input type="radio" name="gender" id="male" checked="checked">Male
+                        </label>
+                        <label for="fmale">
+                            <input type="radio" name="gender" id="fmale">Female
+                        </label>
+                        <label for="others">
+                            <input type="radio" name="gender" id="others">Others
+                        </label>
+                    </div>
+                </div>
+                <div class="container hobbies-cont">
+                    <label><span class="label">Hobbies:</span></label>
+                    <div class="group">
+                        <label for="sport">
+                            <input type="checkbox" name="sport" id="sport">Sport
+                        </label>
+                        <label for="reading">
+                            <input type="checkbox" name="reading" id="reading">Reading
+                        </label>
+                        <label for="recreation">
+                            <input type="checkbox" name="recreation" id="recreation">Recreation
+                        </label>
+                        <label for="drawing">
+                            <input type="checkbox" name="drawing" id="drawing">Drawing
+                        </label>
+                        <label for="c-others">
+                            <input type="checkbox" name="c-others" id="c-others">Others
+                        </label>
+                    </div>
+                </div>
+                <div class="container psw-cont">
+                    <label for="psw"><span class="label">Password:</span>
+                        <input type="password" name="psw" id="psw" placeholder="Enter Password"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                        title="Must contain at least one number and one uppercase and lowercase letter, 
+                        and at least 8 or more characters" required>
+                    </label>
+                    <label for="confirm-psw"><span class="label" id="c-psw">Confirm Password:</span>
+                        <input type="password" name="confirm-psw" id="confirm-psw" placeholder="Confirm Password"
+                            required>
+                    </label>
+                </div>
+                <p>By clicking sign up you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+                <button class="signupbtn" type="submit">Sign Up</button>
+                <p class="login">Already have an account? <a href="#" style="color:dodgerblue">Log in</a>.</p>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>
