@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Sign Up Form With JavaScript Authentication">
+    <meta name="keywords" content="signup JavaScript html css Form">
+    <meta name="author" content="Martin Isonguyo">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+
+<body>
+    <div class="modal">
+        <form action="./congratulations.html" method="POST" name="myForm" onsubmit="return validateForm()" id="myForm">
+            <div class="form-container">
+                <h1>CREATE ACCOUNT</h1>
+                <p class="intro">Please fill in this for to sign up with us.</p>
+
+                <div class="container name-cont">
+                    <div class="cont-inner">
+                        <p class="tip fname-tip" id="fnameTip"></p>
+                        <label for="fname"><span class="label">Firstname:</span>
+                            <input type="text" name="fname" id="fname" placeholder=" Enter Firstname" required
+                                onfocus="inputDes('#fname', '#fnameTip')" class="required">
+                        </label>
+                    </div>
+                    <div class="cont-inner">
+                        <p class="tip" id="lnameTip"></p>
+                        <label for="lname"><span class="label">Lastname:</span>
+                            <input type="text" name="lname" id="lname" placeholder=" Enter Lastname"
+                                onfocus="inputDes('#lname', '#lnameTip')">
+                        </label>
+                    </div>
+                </div>
+                <div class="container email-cont">
+                    <div class="cont-inner">
+                        <p class="tip uname-tip" id="unameTip"></p>
+                        <label for="uname"><span class="label">Username:</span>
+                            <input type="text" name="uname" id="uname" placeholder="Enter Username" required
+                                onfocus="inputDes('#uname', '#unameTip')" class="required">
+                        </label>
+                    </div>
+                    <div class="cont-inner">
+                        <p class="tip email-tip" id="emailTip"></p>
+                        <label for="email"><span class="label">Email:</span>
+                            <input type="email" name="email" id="email" placeholder="example@mail.com" required
+                                onfocus="inputDes('#email', '#emailTip')">
+                        </label>
+                    </div>
+                </div>
+                <div class="container birthday-cont">
+                    <div class="cont-inner">
+                        <p class="tip birthday-tip" id="birthdayTip"></p>
+                        <label for="birthday"><span class="label">Birthday:</span>
+                            <input type="date" name="birthday" id="birthday" placeholder="Select Birthday"
+                                max="2015-12-31" required onfocus="inputDes('#birthday', '#birthdayTip')">
+                        </label>
+                    </div>
+                    <div class="cont-inner">
+                        <p class="tip country-tip" id="countryTip"></p>
+                        <label for="country"><span class="label">Country:</span>
+                            <input type="text" name="country" id="country" placeholder="Enter Country"
+                                onfocus="inputDes('#country', '#countryTip')">
+                        </label>
+                    </div>
+                </div>
+                <div class="container gender-cont">
+                    <label><span class="label">Gender:</span></label>
+                    <div class="group">
+                        <label for="male">
+                            <input type="radio" name="gender" id="male" checked="checked">Male
+                        </label>
+                        <label for="fmale">
+                            <input type="radio" name="gender" id="fmale">Female
+                        </label>
+                        <label for="others">
+                            <input type="radio" name="gender" id="others">Others
+                        </label>
+                    </div>
+                </div>
+                <div class="container hobbies-cont">
+                    <label><span class="label">Hobbies:</span></label>
+                    <div class="group">
+                        <label for="sport">
+                            <input type="checkbox" name="sport" id="sport">Sport
+                        </label>
+                        <label for="reading">
+                            <input type="checkbox" name="reading" id="reading">Reading
+                        </label>
+                        <label for="recreation">
+                            <input type="checkbox" name="recreation" id="recreation">Recreation
+                        </label>
+                        <label for="drawing">
+                            <input type="checkbox" name="drawing" id="drawing">Drawing
+                        </label>
+                        <label for="c-others">
+                            <input type="checkbox" name="c-others" id="c-others">Others
+                        </label>
+                    </div>
+                </div>
+                <div class="container psw-cont">
+                    <div class="cont-inner">
+                        <p class="tip psw-tip" id="pswTip"></p>
+                        <label for="psw"><span class="label">Password:</span>
+                            <input type="password" name="psw" id="psw" placeholder="Enter Password"
+                                title="Must contain at least 7 or more characters" required
+                                onfocus="inputDes('#psw', '#pswTip')">
+                            <span class="eye psw-eye"
+                                onclick="togglePasswordVisibility('psw', '.psw-eye')">&#128065;</span>
+                        </label>
+                        <div class="meter-cont">
+                            <div id="pswMeter"></div>
+
+                        </div>
+                    </div>
+                    <div class="cont-inner">
+                        <p class="tip c-psw-tip" id="cPswTip"></p>
+                        <label for="confirm-psw"><span class="label" id="c-psw">Confirm Password:</span>
+                            <input type="password" name="confirmPsw" id="cPsw" placeholder="Repeat Password" required
+                                onfocus="inputDes('#cPsw', '#cPswTip')">
+                            <span class="eye c-psw-eye"
+                                onclick="togglePasswordVisibility('cPsw', '.c-psw-eye')">&#128065;</span>
+                        </label>
+                    </div>
+                </div>
+                <p class="policy">By clicking sign up you agree to our <a href="#" style="color:dodgerblue">Terms &
+                        Privacy</a>.</p>
+                <button class="signupbtn" type="submit" id="signupBtn">Sign Up</button>
+                <p class="login">Already have an account? <a href="#" style="color:dodgerblue">Log in</a>.
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+
+
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>

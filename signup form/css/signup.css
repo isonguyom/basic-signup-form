@@ -1,0 +1,248 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    font-size: 100%;
+}
+
+body {
+    font-family: helvetica, sans-serif;
+    background: radial-gradient(#011624, #010b13);
+    background-blend-mode: soft-light;
+    min-height: 100vh;
+}
+
+.form-container {
+    width: 80%;
+    margin: 80px auto;
+    padding: 15px;
+    border: none;
+    background-color: #010b13;
+    color: #dddada;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0389f7;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.cont-inner {
+    margin: 7px 0;
+    position: relative;
+    padding-top: 20px;
+}
+
+.tip {
+    color: #0389f7;
+    line-height: 1rem;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    height: fit-content;
+    width: 100%;
+    z-index: 1;
+}
+
+.label {
+    display: block;
+    padding-top: 5px;
+    position: relative;
+}
+
+label {
+    display: block;
+}
+
+.gender-cont .group label,
+.hobbies-cont .group label {
+    display: inline;
+    margin: 0;
+    margin-right: 10px;
+    width: auto;
+    line-height: 1.5rem;
+}
+
+.gender-cont .group label:last-child,
+.hobbies-cont .group label:last-child {
+    margin-right: 0;
+}
+
+.hobbies-cont,
+.gender-cont {
+    padding-top: 15px;
+}
+
+input,
+button {
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    background-color: #021c2e;
+    color: #dddada;
+    position: relative;
+}
+
+input[type="radio"],
+[type="checkbox"] {
+    width: auto;
+    margin-right: 4px;
+}
+
+input:focus {
+    background-color: #305479;
+    border: solid 1px #021c2e;
+    color: #dddada;
+    outline: none;
+}
+
+.eye {
+    position: absolute;
+    right: 0.5em;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    border: ridge 1px #021c2e;
+}
+
+button:hover {
+    opacity: 0.7;
+    outline: none;
+}
+
+.signupbtn {
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #0389f78f;
+}
+
+#pswMeter {
+    width: 0px;
+    height: 10px;
+    border-radius: 20px;
+}
+
+.policy {
+    margin-top: 30px;
+}
+
+
+@media screen and (min-width: 700px) {
+    .tip {
+        float: right;
+        width: 70%;
+        right: 0;
+    }
+
+    .meter-cont {
+        width: 70%;
+        float: right;
+    }
+
+    div.container label {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        clear: both;
+    }
+
+    div.gender-cont,
+    div.hobbies-cont {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.container .group {
+        width: 70%;
+        float: right;
+    }
+
+    input {
+        width: 70%;
+        float: right;
+    }
+
+    .gender-cont input,
+    .hobbies-cont input {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    div.container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        clear: both;
+        margin: 10px 0;
+    }
+
+    .cont-inner {
+        width: 47%;
+    }
+
+    .tip {
+        width: 70%;
+        text-align: left;
+    }
+
+    label {
+        width: 100%;
+        float: right;
+    }
+
+
+    div.container .group {
+        width: 100%;
+        float: none;
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .label {
+        display: block;
+        position: relative;
+    }
+
+    form button.signupbtn {
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ================== congratulations page========================= */
+.congrats {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.congrats p {
+    color: white;
+}
